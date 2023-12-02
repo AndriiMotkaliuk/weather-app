@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import AutoComplete from './AutoComplete';
 import getWeatherData from '../services/weatherService'
 
+
 function Inputs({ setQuery, units, setUnits }) {
 
     const [cityList, setCityList] = useState(
