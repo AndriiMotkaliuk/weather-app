@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a4fcd58.css",
+    "main.js": "/static/js/main.d6306bd8.js",
+    "static/media/03_scattered_clouds.jpg": "/static/media/03_scattered_clouds.27c8b421053f977c8d88.jpg",
+    "static/media/11_thunderstorm.jpg": "/static/media/11_thunderstorm.cb984a3a9ceaf3bdfb14.jpg",
+    "static/media/13_snow.jpg": "/static/media/13_snow.470cf29c49062ab6eba5.jpg",
+    "static/media/01_clear_sky.jpg": "/static/media/01_clear_sky.a8660a5fa23e462ce3e4.jpg",
+    "static/media/04_broken-clouds.jpg": "/static/media/04_broken-clouds.61788cee783cdf765c1f.jpg",
+    "static/media/50_mist.jpg": "/static/media/50_mist.d90ddf8803c1324289b5.jpg",
+    "static/media/10_rain.jpg": "/static/media/10_rain.5cd9b7a9cb2596240438.jpg",
+    "static/media/09_shower_rain.jpg": "/static/media/09_shower_rain.9a18caaa79312ba062da.jpg",
+    "static/media/02_few_clouds.jpg": "/static/media/02_few_clouds.88abdeb864a0463e5964.jpg",
+    "static/media/03_scattered_clouds_night.jpg": "/static/media/03_scattered_clouds_night.2dce2541c58b472ccd9a.jpg",
+    "static/media/04_broken_clouds_night.jpg": "/static/media/04_broken_clouds_night.bbdad4c56000701c98c5.jpg",
+    "static/media/01_clear_sky_night.jpg": "/static/media/01_clear_sky_night.1d91c60c99ab9e697185.jpg",
+    "static/media/10_rain_night.jpg": "/static/media/10_rain_night.6ccf02ee7d42cf8f650e.jpg",
+    "static/media/02_few_clouds_night.jpg": "/static/media/02_few_clouds_night.429ba5e65ae70bf647cf.jpg",
+    "static/media/09_shower_rain_night.jpg": "/static/media/09_shower_rain_night.cfc3ca0da5fbad67e7c9.jpg",
+    "index.html": "/index.html",
+    "static/media/close.svg": "/static/media/close.3c5afa94a222e248bf579eaf7502ff8c.svg",
+    "main.1a4fcd58.css.map": "/static/css/main.1a4fcd58.css.map",
+    "main.d6306bd8.js.map": "/static/js/main.d6306bd8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a4fcd58.css",
+    "static/js/main.d6306bd8.js"
+  ]
+}
