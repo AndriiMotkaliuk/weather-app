@@ -1,7 +1,6 @@
 import React from 'react';
 import RemoveIcon from "../images/close.svg";
 
-
 function AutoComplete({ autoCompleteList, selectHandler, removeHandler }) {
     return (
         <ul>

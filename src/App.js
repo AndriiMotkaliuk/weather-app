@@ -35,9 +35,6 @@ function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const message = query.q ? query.q : "current location.";
-        toast.info('Fetching weather for ' + message);
-
         const data = await getFormattedWeatherData({ ...query, units });
         toast.success(`Successfuly fetched weather for ${data.name}, ${data.country}`);
         setWeather(data);
@@ -120,7 +117,6 @@ function App() {
 
       </div>
     </div >
-
   );
 }
 

@@ -10,13 +10,10 @@ import {
 } from '@iconscout/react-unicons';
 import { formatToLocalTime, iconUrlFromCode } from '../services/weatherService';
 
-// function TemperatureAndDetails({ weather: {
-//     details, icon, temp, feels_like, temp_max, temp_min, humidity, sunrise, sunset, speed, timezone, units }
-// }) {
 function TemperatureAndDetails({ weather: {
     details, icon, temp, feels_like, temp_max, temp_min, humidity, sunrise, sunset, speed, timezone }, units = 'metric' }) {
 
-    const windSpeedUnit = units === 'imperial' ? 'ml/h' : 'm/s';
+    const windSpeedUnit = units === 'imperial' ? 'mph' : 'm/s';
 
     return (
         <div>
@@ -27,7 +24,11 @@ function TemperatureAndDetails({ weather: {
                 <img
                     src={iconUrlFromCode(icon)}
                     alt=""
-                    className='w-35' />
+                    className='w-35 rounded-full filter brightness-110'
+                    style={{
+                        background: 'radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%)',
+                    }}
+                />
                 <p className='text-5xl'>{`${temp.toFixed()}°`}</p>
                 <div className='flex flex-col space-y-2'>
                     <div className='flex font-light text-sm items-center justify-start'>
@@ -45,11 +46,8 @@ function TemperatureAndDetails({ weather: {
                     <div className='flex font-light text-sm items-center justify-start'>
                         <UilWind size={18} className="mr-1" />
                         Wind:
-                        {/* <span className='font-medium ml-1'>{`${speed.toFixed()}km/h`}</span> */}
                         <span className='font-medium ml-1'>{`${speed.toFixed()}${windSpeedUnit}`}</span>
-
                     </div>
-
                 </div>
             </div>
 
@@ -83,7 +81,6 @@ function TemperatureAndDetails({ weather: {
                     </p>
                 </div>
             </div>
-
         </div>
     )
 }

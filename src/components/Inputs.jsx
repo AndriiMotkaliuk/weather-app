@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons';
 import { toast } from 'react-toastify';
 import { useRef } from 'react';
-import { useEffect } from 'react';
 import AutoComplete from './AutoComplete';
-import getWeatherData from '../services/weatherService'
-
 
 function Inputs({ setQuery, units, setUnits }) {
 
@@ -21,12 +18,6 @@ function Inputs({ setQuery, units, setUnits }) {
     const searchInput = useRef();
 
     const [city, setCity] = useState('');
-
-    const updateCityListCache = (newCity) => {
-        if (!cityList.includes(newCity)) {
-            setCityList([...cityList, newCity]);
-        }
-    };
 
     const handleUnitsChange = (e) => {
         const selectedUnit = e.currentTarget.name
@@ -70,11 +61,6 @@ function Inputs({ setQuery, units, setUnits }) {
             });
         }
     };
-
-    useEffect(() => {
-        // console.log(searchInput)
-
-    }, []);
 
     const showAutoComplete = () => {
         setIsShowAutocomplet(true)
@@ -149,9 +135,7 @@ function Inputs({ setQuery, units, setUnits }) {
                     onClick={handleUnitsChange}
                 >°F
                 </button>
-
             </div>
-
         </div>
     )
 }

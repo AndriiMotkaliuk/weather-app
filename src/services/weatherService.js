@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import cashData from "./cashData.js";
 
-const API_KEY = '28052ef3f37b4d06c897ccce40989d6d';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 const getWeatherData = async (infoType, searchParams) => {
@@ -82,12 +82,3 @@ const iconUrlFromCode = (code) => `https://openweathermap.org/img/wn/${code}@2x.
 export default getFormattedWeatherData;
 
 export { formatToLocalTime, iconUrlFromCode };
-
-// {
-//     "coord": { "lon": 13.4105, "lat": 52.5244 }, "weather": [{ "id": 801, "main": "Clouds", "description": "few clouds", "icon": "02d" }],
-//         "base": "stations", "main": { "temp": 280.04, "feels_like": 277.09, "temp_min": 278.7, "temp_max": 281.68, "pressure": 979, "humidity": 86 },
-//     "visibility": 10000, "wind": { "speed": 4.47, "deg": 186, "gust": 6.71 }, "clouds": { "all": 20 }, "dt": 1699084364, "sys": {
-//         "type": 2, "id": 2011538, "country": "DE",
-//             "sunrise": 1699078035, "sunset": 1699111951
-//     }, "timezone": 3600, "id": 2950159, "name": "Berlin", "cod": 200
-// }

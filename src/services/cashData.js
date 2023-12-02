@@ -6,21 +6,19 @@ const isTimeout = (time) => {
 
 const clearLocalStorage = () => {
     localStorage.clear();
+    setTimeout(clearLocalStorage, timeOffset);
 }
 
-setInterval(clearLocalStorage, timeOffset);
+setTimeout(clearLocalStorage, timeOffset);
 
 const cashData = (key, data) => {
     if (!data) {
         const localStorageData = JSON.parse(localStorage.getItem(key));
-        if (localStorageData && localStorageData.data && isTimeout(localStorageData.time)) {
-
-            localStorage.setItem(key, JSON.stringify({ data: localStorageData.data, time: Date.now() }));
+        if (localStorageData && localStorageData.data && !isTimeout(localStorageData.time)) {
             return localStorageData.data;
         }
         return null;
     }
-
 
     localStorage.setItem(key, JSON.stringify({ data, time: Date.now() }));
 }
